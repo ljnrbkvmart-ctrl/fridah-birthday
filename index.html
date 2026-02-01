@@ -1,1147 +1,1160 @@
 <!DOCTYPE html>
-<!--
-=====================================================================================
-PROJECT: Complete Birthday Experience for Fridah Nyanchama
-AUTHOR: Lubanga James
-DATE: 1st February 2026
-=====================================================================================
--->
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Fridah 💖 | From Lubanga James</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For Fridah 💖 | From Lubanga James</title>
+    
+    <!-- Mobile Viewport Fix -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#ff5e8a">
+    
+    <!-- FONTS & ICONS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========== MOBILE-FIRST STYLES ========== */
+        :root {
+            --color-primary: #ff5e8a;
+            --color-secondary: #ffd1dc;
+            --color-accent: #ffb6c1;
+            --color-bg-main: #ff9a9e;
+            --color-bg-soft: #fad0c4;
+            --color-white: #ffffff;
+            --color-gold: #ffd700;
+            --color-deep: #d44d8c;
+            --glass-bg-light: rgba(255,255,255,0.15);
+            --glass-bg-medium: rgba(255,255,255,0.22);
+            --glass-border: rgba(255,255,255,0.35);
+            --shadow-heavy: 0 15px 40px rgba(0,0,0,0.3);
+            --shadow-medium: 0 10px 25px rgba(0,0,0,0.2);
+            --shadow-soft: 0 5px 15px rgba(0,0,0,0.1);
+            --radius-xl: 25px;
+            --radius-lg: 20px;
+            --radius-md: 15px;
+            --radius-sm: 10px;
+        }
 
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        /* RESET FOR MOBILE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  <!-- STYLES -->
-  <style>
-    :root {
-      --color-primary: #ff5e8a;
-      --color-secondary: #ffd1dc;
-      --color-accent: #ffb6c1;
-      --color-bg-main: #ff9a9e;
-      --color-bg-soft: #fad0c4;
-      --color-white: #ffffff;
-      --color-gold: #ffd700;
-      --color-deep: #d44d8c;
-      --glass-bg-light: rgba(255,255,255,0.15);
-      --glass-bg-medium: rgba(255,255,255,0.22);
-      --glass-border: rgba(255,255,255,0.35);
-      --shadow-heavy: 0 45px 100px rgba(0,0,0,0.4);
-      --shadow-medium: 0 25px 55px rgba(0,0,0,0.3);
-      --shadow-soft: 0 15px 35px rgba(0,0,0,0.2);
-      --radius-xl: 36px;
-      --radius-lg: 28px;
-      --radius-md: 18px;
-      --radius-sm: 10px;
-    }
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: fixed; /* Prevent scrolling on mobile */
+        }
 
-    /* RESET */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, var(--color-bg-main), var(--color-bg-soft) 65%, #fbc2eb);
+            color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            touch-action: manipulation; /* Prevent zoom on mobile */
+        }
 
-    html, body {
-      height: 100%;
-      overflow: hidden;
-    }
+        /* PREVENT TEXT SELECTION ON MOBILE */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, var(--color-bg-main), var(--color-bg-soft) 65%, #fbc2eb);
-      color: var(--color-white);
-      overflow: hidden;
-      position: relative;
-    }
+        /* STAR BACKGROUND - MOBILE OPTIMIZED */
+        .starry-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
 
-    /* STAR BACKGROUND */
-    .starry-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 1;
-    }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
 
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      animation: twinkle 3s infinite alternate;
-    }
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
 
-    @keyframes twinkle {
-      0% { opacity: 0.2; }
-      100% { opacity: 1; }
-    }
+        /* STEP CONTAINER - MOBILE FIRST */
+        .step {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            z-index: 10;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        }
 
-    /* ALL SECTIONS - HIDDEN BY DEFAULT */
-    .step {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 10;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.8s ease;
-    }
+        .step.active {
+            opacity: 1;
+            pointer-events: all;
+        }
 
-    .step.active {
-      opacity: 1;
-      pointer-events: all;
-    }
+        .step-container {
+            width: 100%;
+            max-width: 95%;
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--glass-bg-medium);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* For Safari */
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-heavy);
+            transform: translateY(20px);
+            transition: transform 0.5s ease;
+            position: relative;
+        }
 
-    /* STEP CONTAINER */
-    .step-container {
-      max-width: 550px;
-      width: 100%;
-      padding: 50px 40px;
-      text-align: center;
-      background: var(--glass-bg-medium);
-      backdrop-filter: blur(18px);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--glass-border);
-      box-shadow: var(--shadow-heavy);
-      transform: translateY(20px);
-      transition: transform 0.8s ease;
-      position: relative;
-    }
+        .step.active .step-container {
+            transform: translateY(0);
+        }
 
-    .step.active .step-container {
-      transform: translateY(0);
-    }
+        /* TYPOGRAPHY FOR MOBILE */
+        .step-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: var(--color-deep);
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-    /* TYPOGRAPHY */
-    .step-title {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.2rem;
-      margin-bottom: 20px;
-      color: var(--color-deep);
-      line-height: 1.2;
-    }
+        .step-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            padding: 0 10px;
+        }
 
-    .step-subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      margin-bottom: 30px;
-      line-height: 1.5;
-    }
+        /* PHOTO CONTAINER - MOBILE OPTIMIZED */
+        .photo-container {
+            width: 170px;
+            height: 170px;
+            margin: 20px auto;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(135deg, var(--color-white), var(--color-secondary));
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+            border: 3px solid var(--color-white);
+        }
 
-    /* PHOTO */
-    .photo-container {
-      width: 200px;
-      height: 200px;
-      margin: 25px auto;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, var(--color-white), var(--color-secondary));
-      box-shadow: var(--shadow-soft);
-      overflow: hidden;
-      border: 3px solid var(--color-white);
-    }
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
 
-    .photo-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
+        /* INPUTS - MOBILE FRIENDLY */
+        .step-input {
+            width: 100%;
+            padding: 18px 20px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            margin: 15px 0;
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            text-align: center;
+            transition: all 0.3s ease;
+            -webkit-appearance: none; /* Remove iOS styling */
+            appearance: none;
+        }
 
-    /* INPUTS */
-    .step-input {
-      width: 100%;
-      padding: 16px 20px;
-      border-radius: 40px;
-      border: none;
-      outline: none;
-      font-size: 1rem;
-      margin: 20px 0;
-      background: rgba(255,255,255,0.9);
-      color: #333;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
+        .step-input:focus {
+            background: white;
+            box-shadow: 0 0 0 3px rgba(255, 94, 138, 0.3);
+        }
 
-    .step-input:focus {
-      background: white;
-      box-shadow: 0 0 0 3px rgba(255, 94, 138, 0.3);
-    }
+        /* BUTTONS - TAP FRIENDLY (MIN 44px RECOMMENDED) */
+        .step-button {
+            padding: 18px 30px;
+            border-radius: 30px;
+            border: none;
+            background: var(--color-white);
+            color: var(--color-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-width: 200px;
+            min-height: 60px; /* Minimum tap target */
+            box-shadow: var(--shadow-medium);
+            touch-action: manipulation;
+        }
 
-    /* BUTTONS */
-    .step-button {
-      padding: 16px 40px;
-      border-radius: 40px;
-      border: none;
-      background: var(--color-white);
-      color: var(--color-primary);
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.35s ease;
-      font-size: 1.1rem;
-      margin-top: 20px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-width: 200px;
-    }
+        .step-button:hover, .step-button:active {
+            transform: scale(1.05);
+            background: var(--color-primary);
+            color: white;
+        }
 
-    .step-button:hover {
-      transform: scale(1.05);
-      box-shadow: var(--shadow-medium);
-      background: var(--color-primary);
-      color: white;
-    }
+        /* MESSAGE TEXT - MOBILE READABLE */
+        .message-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-family: 'Cormorant Garamond', serif;
+            padding: 0 10px;
+        }
 
-    .step-button:active {
-      transform: scale(0.98);
-    }
+        .signature {
+            margin-top: 30px;
+            font-size: 1rem;
+            font-family: 'Great Vibes', cursive;
+            color: var(--color-gold);
+            font-size: 1.3rem;
+        }
 
-    /* MESSAGE TEXT */
-    .message-text {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      font-family: 'Cormorant Garamond', serif;
-      padding: 0 10px;
-    }
+        /* PROGRESS INDICATOR - MOBILE OPTIMIZED */
+        .progress-indicator {
+            position: fixed;
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 100;
+            background: rgba(255,255,255,0.15);
+            padding: 10px 15px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
 
-    .signature {
-      margin-top: 40px;
-      font-size: 1rem;
-      opacity: 0.9;
-      font-family: 'Great Vibes', cursive;
-      color: var(--color-gold);
-      font-size: 1.3rem;
-    }
+        .progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transition: all 0.3s ease;
+        }
 
-    /* PROGRESS INDICATOR */
-    .progress-indicator {
-      position: fixed;
-      top: 30px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 10px;
-      z-index: 100;
-      background: rgba(255,255,255,0.1);
-      padding: 10px 20px;
-      border-radius: 30px;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+        .progress-dot.active {
+            background: var(--color-primary);
+            transform: scale(1.2);
+        }
 
-    .progress-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-      transition: all 0.3s ease;
-    }
+        /* HEART ANIMATION - MOBILE POSITION */
+        .heart-animation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            animation: heartbeat 1.5s infinite;
+            z-index: 100;
+        }
 
-    .progress-dot.active {
-      background: var(--color-primary);
-      transform: scale(1.3);
-    }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
 
-    /* HEART ANIMATION */
-    .heart-animation {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      color: var(--color-primary);
-      font-size: 2rem;
-      animation: heartbeat 1.5s infinite;
-      z-index: 100;
-    }
+        /* MUSIC PLAYER - MOBILE POSITION */
+        .music-player {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--glass-bg-medium);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+        }
 
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.3); }
-    }
+        .music-player:active {
+            transform: scale(1.1);
+        }
 
-    /* ROSE PETALS */
-    .petal {
-      position: fixed;
-      top: -20px;
-      width: 14px;
-      height: 14px;
-      background: var(--color-accent);
-      border-radius: 50% 50% 50% 0;
-      transform: rotate(45deg);
-      animation: petalFall linear forwards;
-      pointer-events: none;
-      z-index: 2;
-    }
+        .music-player i {
+            font-size: 1.4rem;
+            color: white;
+        }
 
-    @keyframes petalFall {
-      from { transform: translateY(0) rotate(0deg); opacity: 1; }
-      to { transform: translateY(120vh) rotate(420deg); opacity: 0; }
-    }
+        /* ROSE PETALS - MOBILE OPTIMIZED */
+        .petal {
+            position: fixed;
+            top: -20px;
+            width: 12px;
+            height: 12px;
+            background: var(--color-accent);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(45deg);
+            animation: petalFall linear forwards;
+            pointer-events: none;
+            z-index: 2;
+        }
 
-    /* BIRTHDAY DATE */
-    .birthday-date {
-      display: inline-block;
-      background: rgba(0,0,0,0.1);
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      margin: 15px 0;
-      color: rgba(255,255,255,0.9);
-    }
+        @keyframes petalFall {
+            from { transform: translateY(0) rotate(0deg); opacity: 1; }
+            to { transform: translateY(120vh) rotate(420deg); opacity: 0; }
+        }
 
-    /* WISH DISPLAY */
-    .wish-display {
-      background: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 20px;
-      margin: 20px 0;
-      border-left: 4px solid var(--color-primary);
-      text-align: left;
-    }
+        /* BIRTHDAY DATE */
+        .birthday-date {
+            display: inline-block;
+            background: rgba(0,0,0,0.15);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin: 15px 0;
+            color: rgba(255,255,255,0.95);
+        }
 
-    .wish-display p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
+        /* WISH DISPLAY */
+        .wish-display {
+            background: rgba(255,255,255,0.1);
+            padding: 18px;
+            border-radius: 18px;
+            margin: 18px 0;
+            border-left: 4px solid var(--color-primary);
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
 
-    /* QUALITIES LIST */
-    .qualities-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin: 25px 0;
-      text-align: left;
-    }
+        /* QUALITIES LIST - MOBILE STACK */
+        .qualities-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+            text-align: left;
+        }
 
-    .quality-item {
-      background: rgba(255,255,255,0.1);
-      padding: 15px;
-      border-radius: 15px;
-      border-left: 3px solid var(--color-primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .quality-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 3px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+        }
 
-    .quality-item i {
-      color: var(--color-primary);
-      font-size: 1.2rem;
-    }
+        .quality-item i {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            min-width: 24px;
+        }
 
-    /* JOKE CONTAINER */
-    .joke-container {
-      background: rgba(255,255,255,0.1);
-      padding: 25px;
-      border-radius: 20px;
-      margin: 25px 0;
-      border: 2px dashed var(--color-primary);
-    }
+        /* JOKE CONTAINER */
+        .joke-container {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 18px;
+            margin: 20px 0;
+            border: 2px dashed var(--color-primary);
+        }
 
-    .joke-setup {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      color: var(--color-gold);
-    }
+        .joke-setup {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--color-gold);
+        }
 
-    .joke-punchline {
-      font-size: 1.4rem;
-      font-weight: bold;
-      color: var(--color-primary);
-    }
+        .joke-punchline {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
 
-    /* MUSIC PLAYER */
-    .music-player {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--glass-bg-medium);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--glass-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 100;
-      box-shadow: var(--shadow-soft);
-      transition: all 0.3s ease;
-    }
+        /* FORM CONTROLS - MOBILE */
+        .form-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-    .music-player:hover {
-      transform: scale(1.1);
-    }
+        /* TEXTAREA SPECIFIC */
+        textarea.step-input {
+            min-height: 100px;
+            font-size: 1rem;
+            line-height: 1.5;
+            padding: 15px;
+            border-radius: 20px;
+            resize: none;
+        }
 
-    .music-player i {
-      font-size: 1.5rem;
-      color: white;
-    }
+        /* TABLET STYLES */
+        @media (min-width: 768px) {
+            .step-container {
+                max-width: 500px;
+                padding: 40px 35px;
+            }
+            
+            .step-title {
+                font-size: 3.5rem;
+            }
+            
+            .photo-container {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .qualities-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .form-controls {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
 
-    /* RESPONSIVE */
-    @media (max-width: 600px) {
-      .step-container {
-        padding: 40px 25px;
-        max-width: 90%;
-      }
-      
-      .step-title {
-        font-size: 2.5rem;
-      }
-      
-      .photo-container {
-        width: 180px;
-        height: 180px;
-      }
-      
-      .progress-indicator {
-        top: 20px;
-      }
-      
-      .qualities-list {
-        grid-template-columns: 1fr;
-      }
-    }
+        /* DESKTOP STYLES */
+        @media (min-width: 1024px) {
+            .step-container {
+                max-width: 550px;
+                padding: 50px 40px;
+            }
+            
+            .step-title {
+                font-size: 4rem;
+            }
+        }
 
-    @media (max-width: 400px) {
-      .step-title {
-        font-size: 2.2rem;
-      }
-      
-      .message-text {
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+        /* LARGE DESKTOP */
+        @media (min-width: 1440px) {
+            .step-container {
+                max-width: 600px;
+            }
+        }
+
+        /* SAFARI SPECIFIC FIXES */
+        @supports (-webkit-touch-callout: none) {
+            .step-container {
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+            
+            .step {
+                padding: 20px;
+            }
+        }
+
+        /* FIREFOX SCROLLBAR FIX */
+        .step {
+            scrollbar-width: none;
+        }
+        
+        .step::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* SAFARI BOTTOM BAR FIX */
+        @media (max-width: 768px) {
+            .step-button {
+                margin-bottom: env(safe-area-inset-bottom, 20px);
+            }
+        }
+
+        /* LANDSCAPE MODE */
+        @media (orientation: landscape) and (max-height: 500px) {
+            .step-container {
+                padding: 20px 15px;
+                max-width: 90%;
+            }
+            
+            .photo-container {
+                width: 120px;
+                height: 120px;
+                margin: 10px auto;
+            }
+            
+            .step-title {
+                font-size: 2.2rem;
+                margin-bottom: 10px;
+            }
+            
+            .message-text {
+                font-size: 1rem;
+                margin-bottom: 15px;
+            }
+            
+            .step-button {
+                padding: 12px 20px;
+                min-height: 50px;
+                margin-top: 10px;
+            }
+            
+            .progress-indicator {
+                top: 10px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- STAR BACKGROUND -->
+    <div class="starry-bg" id="starryBg"></div>
 
-  <!-- STAR BACKGROUND -->
-  <div class="starry-bg" id="starryBg"></div>
-
-  <!-- HEART ANIMATION -->
-  <div class="heart-animation">
-    <i class="fas fa-heart"></i>
-  </div>
-
-  <!-- MUSIC PLAYER -->
-  <div class="music-player" id="musicControl">
-    <i class="fas fa-play" id="musicIcon"></i>
-  </div>
-
-  <!-- PROGRESS INDICATOR -->
-  <div class="progress-indicator" id="progressIndicator">
-    <div class="progress-dot" data-step="0"></div>
-    <div class="progress-dot" data-step="1"></div>
-    <div class="progress-dot" data-step="2"></div>
-    <div class="progress-dot" data-step="3"></div>
-    <div class="progress-dot" data-step="4"></div>
-    <div class="progress-dot" data-step="5"></div>
-    <div class="progress-dot" data-step="6"></div>
-    <div class="progress-dot" data-step="7"></div>
-    <div class="progress-dot" data-step="8"></div>
-  </div>
-
-  <!-- ======================
-       STEP 0: PASSWORD ENTRY
-  ======================= -->
-  <div class="step active" id="step0">
-    <div class="step-container">
-      <h1 class="step-title">For Fridah Only</h1>
-      <p class="step-subtitle">A private birthday experience created by Lubanga James</p>
-      
-      <div class="photo-container">
-        <img id="fridah" src="" alt="Fridah Nyanchama">
-      </div>
-      
-      <p class="step-subtitle">Enter your name to begin this special experience</p>
-      
-      <input type="text" class="step-input" id="passwordInput" placeholder="Type your name here" autocomplete="off">
-      
-      <button class="step-button" id="enterBtn">
-        <i class="fas fa-key"></i> Enter Experience
-      </button>
-      
-      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-        This experience is exclusively for Fridah Nyanchama
-      </p>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 1: BIRTHDAY GREETING
-  ======================= -->
-  <div class="step" id="step1">
-    <div class="step-container">
-      <h1 class="step-title">Happy Belated Birthday!</h1>
-      
-      <div class="birthday-date">
-        <i class="fas fa-birthday-cake"></i> 31st January 2026
-      </div>
-      
-      <div class="photo-container">
-        <img id="image1" src="" alt="Fridah Nyanchama">
-      </div>
-      
-      <p class="message-text">
-        Fridah, though I'm a day late, my wishes come with twice the love.<br><br>
-        Your birthday yesterday was a reminder of how grateful I am that you exist in this world.
-      </p>
-      
-      <button class="step-button" id="nextToStep2">
-        <i class="fas fa-arrow-right"></i> Continue
-      </button>
-      
-      <div class="signature">- Lubanga James</div>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 2: HEARTFELT MESSAGE
-  ======================= -->
-  <div class="step" id="step2">
-    <div class="step-container">
-      <h1 class="step-title">A Message for You</h1>
-      
-      <p class="message-text">
-        I want you to know this without any pressure...<br><br>
-        
-        You are genuinely special to me. There's a calmness and grace about you that I deeply admire.<br><br>
-        
-        Your intelligence, kindness, and the way you carry yourself—it all matters to me more than you might realize.<br><br>
-        
-        I'm grateful for every conversation we've had and every moment we've shared.
-      </p>
-      
-      <button class="step-button" id="nextToStep3">
-        <i class="fas fa-heart"></i> Continue to Encouragement
-      </button>
-      
-      <div class="signature">- With sincere admiration, James</div>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 3: ENCOURAGEMENT
-  ======================= -->
-  <div class="step" id="step3">
-    <div class="step-container">
-      <h1 class="step-title">Why You're Amazing</h1>
-      
-      <div class="qualities-list">
-        <div class="quality-item">
-          <i class="fas fa-brain"></i>
-          <span>Intelligent & Wise</span>
-        </div>
-        <div class="quality-item">
-          <i class="fas fa-heart"></i>
-          <span>Kind & Compassionate</span>
-        </div>
-        <div class="quality-item">
-          <i class="fas fa-star"></i>
-          <span>Beautiful Inside & Out</span>
-        </div>
-        <div class="quality-item">
-          <i class="fas fa-laugh-beam"></i>
-          <span>Wonderful Sense of Humor</span>
-        </div>
-        <div class="quality-item">
-          <i class="fas fa-hand-holding-heart"></i>
-          <span>Caring & Thoughtful</span>
-        </div>
-        <div class="quality-item">
-          <i class="fas fa-bullseye"></i>
-          <span>Determined & Strong</span>
-        </div>
-      </div>
-      
-      <p class="message-text">
-        Fridah, you have so much potential and so many wonderful qualities.<br><br>
-        Never doubt your worth or capabilities. You're capable of achieving anything you set your mind to.
-      </p>
-      
-      <button class="step-button" id="nextToStep4">
-        <i class="fas fa-graduation-cap"></i> Continue to Success
-      </button>
-      
-      <div class="signature">- Believing in you, James</div>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 4: SCHOOL & SUCCESS
-  ======================= -->
-  <div class="step" id="step4">
-    <div class="step-container">
-      <h1 class="step-title">Your Success Journey</h1>
-      
-      <div style="font-size: 4rem; color: var(--color-gold); margin: 20px 0;">
-        <i class="fas fa-graduation-cap"></i>
-      </div>
-      
-      <p class="message-text">
-        I believe in you and your potential to achieve great things.<br><br>
-        
-        About the course you dropped—I want you to know that it's never too late.<br><br>
-        
-        <strong style="color: var(--color-gold);">Consider going back to school.</strong> Finish what you started.<br><br>
-        
-        You have the intelligence, the strength, and the determination to complete it successfully.<br><br>
-        
-        I'll support you in any way I can. Your education is an investment in your future, and you deserve to see it through.
-      </p>
-      
-      <button class="step-button" id="nextToStep5">
-        <i class="fas fa-smile-beam"></i> Let's Make You Smile
-      </button>
-      
-      <div class="signature">- Your biggest supporter, James</div>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 5: MAKE HER SMILE
-  ======================= -->
-  <div class="step" id="step5">
-    <div class="step-container">
-      <h1 class="step-title">Time to Smile 😊</h1>
-      
-      <div class="joke-container">
-        <div class="joke-setup">Why don't scientists trust atoms?</div>
-        <div class="joke-punchline" id="jokePunchline" style="display: none;">Because they make up everything!</div>
-        <button class="step-button" id="revealJoke" style="background: var(--color-gold); color: #333; margin-top: 20px;">
-          <i class="fas fa-laugh-wink"></i> Reveal Joke
-        </button>
-      </div>
-      
-      <p class="message-text">
-        Your smile is one of my favorite sights in the world.<br><br>
-        It lights up any room and brings joy to everyone around you.<br><br>
-        Never forget to find moments of joy and laughter in your day.
-      </p>
-      
-      <button class="step-button" id="nextToStep6">
-        <i class="fas fa-gift"></i> Your Birthday Wish
-      </button>
-      
-      <div class="signature">- Always here to make you smile, James</div>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 6: BIRTHDAY WISH INPUT
-  ======================= -->
-  <div class="step" id="step6">
-    <div class="step-container">
-      <h1 class="step-title">Your Birthday Wish</h1>
-      
-      <p class="step-subtitle">
-        If you could have anything for your birthday, what would it be?<br>
-        (Be as specific or general as you'd like)
-      </p>
-      
-      <textarea class="step-input" id="birthdayWish" placeholder="Type your birthday wish here..." rows="4" style="border-radius: 20px; min-height: 120px;"></textarea>
-      
-      <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
-        <button class="step-button" id="skipWish" style="background: rgba(255,255,255,0.2); color: white;">
-          <i class="fas fa-forward"></i> Skip
-        </button>
-        
-        <button class="step-button" id="submitWish">
-          <i class="fas fa-gift"></i> Submit Wish
-        </button>
-      </div>
-      
-      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-        Your wish will be remembered for Valentine's Day
-      </p>
-    </div>
-  </div>
-
-  <!-- ======================
-       STEP 7: VALENTINE'S PROMISE
-  ======================= -->
-  <div class="step" id="step7">
-    <div class="step-container">
-      <h1 class="step-title">For Valentine's Day</h1>
-      
-      <div id="wishDisplay" class="wish-display" style="display: none;">
-        <p><strong>Your Wish:</strong> <span id="wishText"></span></p>
-      </div>
-      
-      <div style="font-size: 4rem; color: var(--color-primary); margin: 20px 0;">
+    <!-- HEART ANIMATION -->
+    <div class="heart-animation">
         <i class="fas fa-heart"></i>
-      </div>
-      
-      <p class="message-text">
-        I want to make you a promise...<br><br>
-        
-        On Valentine's Day (February 14, 2026), I will personally ensure you receive something special.<br><br>
-        
-        <span id="wishPromise" style="color: var(--color-gold); font-weight: 500;">
-          Your birthday wish will be remembered and honored.
-        </span><br><br>
-        
-        This is my commitment to you—to show you that you're valued and appreciated.
-      </p>
-      
-      <button class="step-button" id="nextToStep8">
-        <i class="fas fa-calendar-heart"></i> Continue to Final Message
-      </button>
-      
-      <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-        Valentine's Day: February 14, 2026
-      </p>
     </div>
-  </div>
 
-  <!-- ======================
-       STEP 8: FINAL THOUGHTS
-  ======================= -->
-  <div class="step" id="step8">
-    <div class="step-container">
-      <h1 class="step-title">Thank You, Fridah</h1>
-      
-      <div class="photo-container">
-        <img id="image2" src="" alt="Fridah Nyanchama">
-      </div>
-      
-      <p class="message-text">
-        Thank you for taking the time to go through this experience.<br><br>
-        
-        I hope it made you smile, feel encouraged, and know how special you are.<br><br>
-        
-        Remember:<br>
-        • You are incredible<br>
-        • You deserve all happiness<br>
-        • You can achieve anything<br>
-        • You are valued<br><br>
-        
-        I'll be in touch soon. Until then, know that you have my sincere admiration and respect.
-      </p>
-      
-      <button class="step-button" id="restartBtn">
-        <i class="fas fa-redo"></i> Experience Again
-      </button>
-      
-      <div class="signature">- Always, Lubanga James</div>
-      
-      <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">
-        Created with care on 1st February 2026
-      </p>
+    <!-- MUSIC PLAYER -->
+    <div class="music-player" id="musicControl">
+        <i class="fas fa-play" id="musicIcon"></i>
     </div>
-  </div>
 
-  <!-- BACKGROUND MUSIC -->
-  <audio id="backgroundMusic">
-    <!-- Will be set dynamically -->
-  </audio>
+    <!-- PROGRESS INDICATOR -->
+    <div class="progress-indicator" id="progressIndicator">
+        <div class="progress-dot" data-step="0"></div>
+        <div class="progress-dot" data-step="1"></div>
+        <div class="progress-dot" data-step="2"></div>
+        <div class="progress-dot" data-step="3"></div>
+        <div class="progress-dot" data-step="4"></div>
+        <div class="progress-dot" data-step="5"></div>
+        <div class="progress-dot" data-step="6"></div>
+        <div class="progress-dot" data-step="7"></div>
+        <div class="progress-dot" data-step="8"></div>
+    </div>
 
-  <!-- ======================
-       JAVASCRIPT
-  ======================= -->
-  <script>
-    // DOM Elements
-    const steps = document.querySelectorAll('.step');
-    const progressDots = document.querySelectorAll('.progress-dot');
-    const starryBg = document.getElementById('starryBg');
-    
-    // Input elements
-    const passwordInput = document.getElementById('passwordInput');
-    const birthdayWish = document.getElementById('birthdayWish');
-    
-    // Image elements
-    const mainImage = document.getElementById('fridah');
-    const image1 = document.getElementById('image1');
-    const image2 = document.getElementById('image2');
-    
-    // Button elements
-    const enterBtn = document.getElementById('enterBtn');
-    const nextToStep2 = document.getElementById('nextToStep2');
-    const nextToStep3 = document.getElementById('nextToStep3');
-    const nextToStep4 = document.getElementById('nextToStep4');
-    const nextToStep5 = document.getElementById('nextToStep5');
-    const nextToStep6 = document.getElementById('nextToStep6');
-    const skipWish = document.getElementById('skipWish');
-    const submitWish = document.getElementById('submitWish');
-    const nextToStep8 = document.getElementById('nextToStep8');
-    const restartBtn = document.getElementById('restartBtn');
-    const revealJoke = document.getElementById('revealJoke');
-    
-    // Display elements
-    const wishDisplay = document.getElementById('wishDisplay');
-    const wishText = document.getElementById('wishText');
-    const wishPromise = document.getElementById('wishPromise');
-    const jokePunchline = document.getElementById('jokePunchline');
-    
-    // Music elements
-    const musicControl = document.getElementById('musicControl');
-    const musicIcon = document.getElementById('musicIcon');
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    
-    // State
-    let currentStep = 0;
-    let userWish = '';
-    let isMusicPlaying = false;
-    
-    // ======================
-    // INITIALIZATION
-    // ======================
-    function init() {
-      createStars();
-      updateProgress();
-      startPetals();
-      setupMusic();
-      loadImages();
-      
-      // Focus on password input
-      passwordInput.focus();
-      
-      // Console welcome
-      console.log('%c🎂 For Fridah Nyanchama 🎂', 'color: #ff5e8a; font-size: 18px; font-weight: bold;');
-      console.log('%cComplete step-by-step experience by Lubanga James', 'color: #ffb6c1; font-size: 14px;');
-    }
-    
-    // ======================
-    // IMAGE LOADING
-    // ======================
-    function loadImages() {
-      // Try different image sources in order
-      const imageSources = [
-        'fridah.jpg',
-        'friday.jpg',
-        'friday',
-        'fridah' 
-      ];
-      
-      // Function to set image source with fallback
-      function setImageWithFallback(imgElement, sources, index = 0) {
-        if (index >= sources.length) {
-          console.log('No image found, using default');
-          imgElement.src = sources[sources.length - 1]; // Last is default
-          return;
-        }
+    <!-- ====================== STEP 0: PASSWORD ENTRY ======================= -->
+    <div class="step active" id="step0">
+        <div class="step-container">
+            <h1 class="step-title">For Fridah Only</h1>
+            <p class="step-subtitle">A private birthday experience created by Lubanga James</p>
+            
+            <div class="photo-container">
+                <img id="mainImage" src="" alt="Fridah Nyanchama">
+            </div>
+            
+            <p class="step-subtitle">Enter your name to begin this special experience</p>
+            
+            <input type="text" class="step-input" id="passwordInput" placeholder="Type your name here" autocomplete="off">
+            
+            <button class="step-button" id="enterBtn">
+                <i class="fas fa-key"></i> Enter Experience
+            </button>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+                This experience is exclusively for Fridah Nyanchama
+            </p>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 1: BIRTHDAY GREETING ======================= -->
+    <div class="step" id="step1">
+        <div class="step-container">
+            <h1 class="step-title">Happy Belated Birthday!</h1>
+            
+            <div class="birthday-date">
+                <i class="fas fa-birthday-cake"></i> 31st January 2026
+            </div>
+            
+            <div class="photo-container">
+                <img id="image1" src="" alt="Fridah Nyanchama">
+            </div>
+            
+            <p class="message-text">
+                Fridah, though I'm a day late, my wishes come with twice the love.<br><br>
+                Your birthday yesterday was a reminder of how grateful I am that you exist in this world.
+            </p>
+            
+            <button class="step-button" id="nextToStep2">
+                <i class="fas fa-arrow-right"></i> Continue
+            </button>
+            
+            <div class="signature">- Lubanga James</div>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 2: HEARTFELT MESSAGE ======================= -->
+    <div class="step" id="step2">
+        <div class="step-container">
+            <h1 class="step-title">A Message for You</h1>
+            
+            <p class="message-text">
+                I want you to know this without any pressure...<br><br>
+                
+                You are genuinely special to me. There's a calmness and grace about you that I deeply admire.<br><br>
+                
+                Your intelligence, kindness, and the way you carry yourself—it all matters to me more than you might realize.<br><br>
+                
+                I'm grateful for every conversation we've had and every moment we've shared.
+            </p>
+            
+            <button class="step-button" id="nextToStep3">
+                <i class="fas fa-heart"></i> Continue to Encouragement
+            </button>
+            
+            <div class="signature">- With sincere admiration, James</div>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 3: ENCOURAGEMENT ======================= -->
+    <div class="step" id="step3">
+        <div class="step-container">
+            <h1 class="step-title">Why You're Amazing</h1>
+            
+            <div class="qualities-list">
+                <div class="quality-item">
+                    <i class="fas fa-brain"></i>
+                    <span>Intelligent & Wise</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-heart"></i>
+                    <span>Kind & Compassionate</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-star"></i>
+                    <span>Beautiful Inside & Out</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-laugh-beam"></i>
+                    <span>Wonderful Sense of Humor</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Caring & Thoughtful</span>
+                </div>
+                <div class="quality-item">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Determined & Strong</span>
+                </div>
+            </div>
+            
+            <p class="message-text">
+                Fridah, you have so much potential and so many wonderful qualities.<br><br>
+                Never doubt your worth or capabilities. You're capable of achieving anything you set your mind to.
+            </p>
+            
+            <button class="step-button" id="nextToStep4">
+                <i class="fas fa-graduation-cap"></i> Continue to Success
+            </button>
+            
+            <div class="signature">- Believing in you, James</div>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 4: SCHOOL & SUCCESS ======================= -->
+    <div class="step" id="step4">
+        <div class="step-container">
+            <h1 class="step-title">Your Success Journey</h1>
+            
+            <div style="font-size: 3.5rem; color: var(--color-gold); margin: 15px 0;">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            
+            <p class="message-text">
+                I believe in you and your potential to achieve great things.<br><br>
+                
+                About the course you dropped—I want you to know that it's never too late.<br><br>
+                
+                <strong style="color: var(--color-gold);">Consider going back to school.</strong> Finish what you started.<br><br>
+                
+                You have the intelligence, the strength, and the determination to complete it successfully.<br><br>
+                
+                I'll support you in any way I can. Your education is an investment in your future, and you deserve to see it through.
+            </p>
+            
+            <button class="step-button" id="nextToStep5">
+                <i class="fas fa-smile-beam"></i> Let's Make You Smile
+            </button>
+            
+            <div class="signature">- Your biggest supporter, James</div>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 5: MAKE HER SMILE ======================= -->
+    <div class="step" id="step5">
+        <div class="step-container">
+            <h1 class="step-title">Time to Smile 😊</h1>
+            
+            <div class="joke-container">
+                <div class="joke-setup">Why don't scientists trust atoms?</div>
+                <div class="joke-punchline" id="jokePunchline" style="display: none;">Because they make up everything!</div>
+                <button class="step-button" id="revealJoke" style="background: var(--color-gold); color: #333; margin-top: 15px;">
+                    <i class="fas fa-laugh-wink"></i> Reveal Joke
+                </button>
+            </div>
+            
+            <p class="message-text">
+                Your smile is one of my favorite sights in the world.<br><br>
+                It lights up any room and brings joy to everyone around you.<br><br>
+                Never forget to find moments of joy and laughter in your day.
+            </p>
+            
+            <button class="step-button" id="nextToStep6">
+                <i class="fas fa-gift"></i> Your Birthday Wish
+            </button>
+            
+            <div class="signature">- Always here to make you smile, James</div>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 6: BIRTHDAY WISH INPUT ======================= -->
+    <div class="step" id="step6">
+        <div class="step-container">
+            <h1 class="step-title">Your Birthday Wish</h1>
+            
+            <p class="step-subtitle">
+                If you could have anything for your birthday, what would it be?<br>
+                (Be as specific or general as you'd like)
+            </p>
+            
+            <textarea class="step-input" id="birthdayWish" placeholder="Type your birthday wish here..." rows="3"></textarea>
+            
+            <div class="form-controls">
+                <button class="step-button" id="skipWish" style="background: rgba(255,255,255,0.2); color: white;">
+                    <i class="fas fa-forward"></i> Skip
+                </button>
+                
+                <button class="step-button" id="submitWish">
+                    <i class="fas fa-gift"></i> Submit Wish
+                </button>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+                Your wish will be remembered for Valentine's Day
+            </p>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 7: VALENTINE'S PROMISE ======================= -->
+    <div class="step" id="step7">
+        <div class="step-container">
+            <h1 class="step-title">For Valentine's Day</h1>
+            
+            <div id="wishDisplay" class="wish-display" style="display: none;">
+                <p><strong>Your Wish:</strong> <span id="wishText"></span></p>
+            </div>
+            
+            <div style="font-size: 3.5rem; color: var(--color-primary); margin: 15px 0;">
+                <i class="fas fa-heart"></i>
+            </div>
+            
+            <p class="message-text">
+                I want to make you a promise...<br><br>
+                
+                On Valentine's Day (February 14, 2026), I will personally ensure you receive something special.<br><br>
+                
+                <span id="wishPromise" style="color: var(--color-gold); font-weight: 500;">
+                    Your birthday wish will be remembered and honored.
+                </span><br><br>
+                
+                This is my commitment to you—to show you that you're valued and appreciated.
+            </p>
+            
+            <button class="step-button" id="nextToStep8">
+                <i class="fas fa-calendar-heart"></i> Continue to Final Message
+            </button>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
+                Valentine's Day: February 14, 2026
+            </p>
+        </div>
+    </div>
+
+    <!-- ====================== STEP 8: FINAL THOUGHTS ======================= -->
+    <div class="step" id="step8">
+        <div class="step-container">
+            <h1 class="step-title">Thank You, Fridah</h1>
+            
+            <div class="photo-container">
+                <img id="image2" src="" alt="Fridah Nyanchama">
+            </div>
+            
+            <p class="message-text">
+                Thank you for taking the time to go through this experience.<br><br>
+                
+                I hope it made you smile, feel encouraged, and know how special you are.<br><br>
+                
+                Remember:<br>
+                • You are incredible<br>
+                • You deserve all happiness<br>
+                • You can achieve anything<br>
+                • You are valued<br><br>
+                
+                I'll be in touch soon. Until then, know that you have my sincere admiration and respect.
+            </p>
+            
+            <button class="step-button" id="restartBtn">
+                <i class="fas fa-redo"></i> Experience Again
+            </button>
+            
+            <div class="signature">- Always, Lubanga James</div>
+            
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.6;">
+                Created with care on 1st February 2026
+            </p>
+        </div>
+    </div>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" preload="auto"></audio>
+
+    <script>
+        // ====================== MOBILE-OPTIMIZED JAVASCRIPT ======================
         
-        const tempImg = new Image();
-        tempImg.onload = function() {
-          imgElement.src = sources[index];
-        };
-        tempImg.onerror = function() {
-          setImageWithFallback(imgElement, sources, index + 1);
-        };
-        tempImg.src = sources[index];
-      }
-      
-      // Set images for all containers
-      setImageWithFallback(mainImage, imageSources);
-      setImageWithFallback(image1, imageSources);
-      setImageWithFallback(image2, imageSources);
-    }
-    
-    // ======================
-    // MUSIC SETUP
-    // ======================
-    function setupMusic() {
-      // Try different music sources
-      const musicSources = [
-        'music.mp3',
-        'music',
-        'https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3'
-      ];
-      
-      // Set source with error handling
-      backgroundMusic.src = musicSources[0];
-      backgroundMusic.load();
-      
-      // Handle errors
-      backgroundMusic.onerror = function() {
-        console.log('First music source failed, trying next...');
-        backgroundMusic.src = musicSources[1];
-        backgroundMusic.load();
+        // DOM Elements
+        const steps = document.querySelectorAll('.step');
+        const progressDots = document.querySelectorAll('.progress-dot');
+        const passwordInput = document.getElementById('passwordInput');
+        const enterBtn = document.getElementById('enterBtn');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        const musicControl = document.getElementById('musicControl');
+        const musicIcon = document.getElementById('musicIcon');
         
-        backgroundMusic.onerror = function() {
-          console.log('Second music source failed, using default...');
-          backgroundMusic.src = musicSources[2];
-          backgroundMusic.load();
+        // Navigation buttons
+        const nextButtons = {
+            step2: document.getElementById('nextToStep2'),
+            step3: document.getElementById('nextToStep3'),
+            step4: document.getElementById('nextToStep4'),
+            step5: document.getElementById('nextToStep5'),
+            step6: document.getElementById('nextToStep6'),
+            step8: document.getElementById('nextToStep8')
         };
-      };
-      
-      // Set volume
-      backgroundMusic.volume = 0.3;
-    }
-    
-    // ======================
-    // MUSIC CONTROL
-    // ======================
-    function toggleMusic() {
-      if (isMusicPlaying) {
-        backgroundMusic.pause();
-        musicIcon.className = 'fas fa-play';
-      } else {
-        backgroundMusic.play().catch(e => {
-          console.log('Music play failed:', e);
+        
+        // State
+        let currentStep = 0;
+        let isMusicPlaying = false;
+        
+        // ====================== INITIALIZATION ======================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('📱 Mobile Birthday Experience Loaded');
+            
+            // Set up files
+            setupFiles();
+            
+            // Create stars
+            createStars();
+            
+            // Start petals
+            setInterval(createPetal, 800);
+            
+            // Focus on password input
+            setTimeout(() => passwordInput.focus(), 500);
+            
+            // Add touch event listeners for better mobile experience
+            setupTouchEvents();
+            
+            // Prevent iOS zoom on double tap
+            document.addEventListener('touchstart', function(e) {
+                if (e.touches.length > 1) e.preventDefault();
+            }, { passive: false });
         });
-        musicIcon.className = 'fas fa-pause';
-      }
-      isMusicPlaying = !isMusicPlaying;
-    }
-    
-    musicControl.addEventListener('click', toggleMusic);
-    
-    // ======================
-    // STAR FIELD GENERATION
-    // ======================
-    function createStars() {
-      for (let i = 0; i < 100; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
         
-        const size = Math.random() * 3 + 1;
-        const left = Math.random() * 100;
-        const top = Math.random() * 100;
-        const duration = Math.random() * 4 + 2;
-        const delay = Math.random() * 5;
-        
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.left = `${left}%`;
-        star.style.top = `${top}%`;
-        star.style.animationDuration = `${duration}s`;
-        star.style.animationDelay = `${delay}s`;
-        
-        starryBg.appendChild(star);
-      }
-    }
-    
-    // ======================
-    // STEP NAVIGATION
-    // ======================
-    function goToStep(stepIndex) {
-      // Validate step index
-      if (stepIndex < 0 || stepIndex >= steps.length) return;
-      
-      // Hide current step
-      steps[currentStep].classList.remove('active');
-      
-      // Update current step
-      currentStep = stepIndex;
-      
-      // Show new step
-      steps[currentStep].classList.add('active');
-      
-      // Update progress indicator
-      updateProgress();
-      
-      // Special actions for certain steps
-      if (stepIndex === 0) {
-        passwordInput.focus();
-      } else if (stepIndex === 6) {
-        birthdayWish.focus();
-      } else if (stepIndex === 7) {
-        // Show wish display if wish was entered
-        if (userWish) {
-          wishText.textContent = userWish;
-          wishDisplay.style.display = 'block';
-          wishPromise.innerHTML = "Your wish for <strong>" + userWish + "</strong> will be remembered and honored.";
-        } else {
-          wishPromise.innerHTML = "I will make sure you receive something meaningful and special.";
-        }
-      }
-    }
-    
-    // ======================
-    // UPDATE PROGRESS DOTS
-    // ======================
-    function updateProgress() {
-      progressDots.forEach((dot, index) => {
-        if (index === currentStep) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    }
-    
-    // ======================
-    // ROSE PETALS
-    // ======================
-    function startPetals() {
-      setInterval(() => {
-        if (currentStep > 0) { // Only show petals after step 0
-          createPetal();
-        }
-      }, 800);
-    }
-    
-    function createPetal() {
-      const petal = document.createElement('div');
-      petal.className = 'petal';
-      petal.style.left = Math.random() * 100 + 'vw';
-      petal.style.animationDuration = 8 + Math.random() * 6 + 's';
-      petal.style.opacity = Math.random() * 0.7 + 0.3;
-      petal.style.background = `hsl(${Math.random() * 30 + 330}, 100%, 70%)`;
-      
-      document.body.appendChild(petal);
-      setTimeout(() => {
-        if (petal.parentNode) {
-          document.body.removeChild(petal);
-        }
-      }, 15000);
-    }
-    
-    // ======================
-    // EVENT LISTENERS
-    // ======================
-    // Password entry
-    enterBtn.addEventListener('click', () => {
-      const name = passwordInput.value.trim().toLowerCase();
-      
-      if (name === 'fridah' || name === 'fridah nyanchama' || name === 'friday') {
-        // Success - move to step 1
-        goToStep(1);
-        
-        // Create celebration petals
-        for (let i = 0; i < 15; i++) {
-          setTimeout(() => createPetal(), i * 100);
+        // ====================== FILE SETUP ======================
+        function setupFiles() {
+            // Try multiple image names
+            const imageNames = ['fridah.jpg', 'friday.jpg', 'friday'];
+            const images = document.querySelectorAll('.photo-container img');
+            
+            images.forEach(img => {
+                let found = false;
+                imageNames.forEach(name => {
+                    if (!found) {
+                        const testImg = new Image();
+                        testImg.onload = function() {
+                            img.src = name;
+                            found = true;
+                        };
+                        testImg.src = name;
+                    }
+                });
+                
+                // Fallback after 2 seconds
+                setTimeout(() => {
+                    if (!img.src || img.src.includes('undefined')) {
+                        img.src = 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80';
+                    }
+                }, 2000);
+            });
+            
+            // Try multiple music names
+            const musicNames = ['music.mp3', 'music'];
+            let musicFound = false;
+            
+            musicNames.forEach(name => {
+                if (!musicFound) {
+                    const testAudio = new Audio();
+                    testAudio.addEventListener('canplay', function() {
+                        if (!musicFound) {
+                            backgroundMusic.src = name;
+                            backgroundMusic.load();
+                            musicFound = true;
+                        }
+                    });
+                    testAudio.addEventListener('error', function() {
+                        // Try next
+                    });
+                    testAudio.src = name;
+                }
+            });
+            
+            // Fallback music
+            setTimeout(() => {
+                if (!musicFound) {
+                    backgroundMusic.src = 'https://assets.mixkit.co/music/preview/mixkit-romantic-sunset-687.mp3';
+                    backgroundMusic.load();
+                }
+            }, 2000);
+            
+            backgroundMusic.volume = 0.3;
+            backgroundMusic.preload = 'auto';
         }
         
-        // Start music
-        toggleMusic();
-      } else if (name === '') {
-        alert('Please enter your name to continue');
-        passwordInput.focus();
-      } else {
-        // Incorrect name
-        passwordInput.style.animation = 'shake 0.5s';
-        passwordInput.value = '';
-        passwordInput.placeholder = 'Try "Fridah"';
-        passwordInput.focus();
-        
-        setTimeout(() => {
-          passwordInput.style.animation = '';
-        }, 500);
-      }
-    });
-    
-    // Allow Enter key for password
-    passwordInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        enterBtn.click();
-      }
-    });
-    
-    // Navigation buttons
-    nextToStep2.addEventListener('click', () => goToStep(2));
-    nextToStep3.addEventListener('click', () => goToStep(3));
-    nextToStep4.addEventListener('click', () => goToStep(4));
-    nextToStep5.addEventListener('click', () => goToStep(5));
-    nextToStep6.addEventListener('click', () => goToStep(6));
-    nextToStep8.addEventListener('click', () => goToStep(8));
-    
-    // Reveal joke
-    revealJoke.addEventListener('click', () => {
-      jokePunchline.style.display = 'block';
-      revealJoke.innerHTML = '<i class="fas fa-laugh"></i> Got it!';
-      revealJoke.style.background = '#4CAF50';
-      revealJoke.style.color = 'white';
-    });
-    
-    // Birthday wish handling
-    submitWish.addEventListener('click', () => {
-      userWish = birthdayWish.value.trim();
-      
-      if (userWish) {
-        // Move to next step
-        goToStep(7);
-        
-        // Confirmation effect
-        submitWish.innerHTML = '<i class="fas fa-check"></i> Wish Saved!';
-        submitWish.style.background = '#4CAF50';
-        submitWish.style.color = 'white';
-        
-        setTimeout(() => {
-          submitWish.innerHTML = '<i class="fas fa-gift"></i> Submit Wish';
-          submitWish.style.background = '';
-          submitWish.style.color = '';
-        }, 1500);
-      } else {
-        birthdayWish.style.border = '2px solid #ff5e8a';
-        birthdayWish.focus();
-        
-        setTimeout(() => {
-          birthdayWish.style.border = '';
-        }, 1000);
-      }
-    });
-    
-    skipWish.addEventListener('click', () => {
-      userWish = '';
-      goToStep(7);
-    });
-    
-    // Restart button
-    restartBtn.addEventListener('click', () => {
-      // Reset everything
-      currentStep = 0;
-      userWish = '';
-      passwordInput.value = '';
-      birthdayWish.value = '';
-      wishDisplay.style.display = 'none';
-      jokePunchline.style.display = 'none';
-      revealJoke.innerHTML = '<i class="fas fa-laugh-wink"></i> Reveal Joke';
-      revealJoke.style.background = '';
-      revealJoke.style.color = '';
-      
-      // Go back to step 0
-      goToStep(0);
-    });
-    
-    // Progress dot navigation
-    progressDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        if (index <= currentStep) {
-          goToStep(index);
+        // ====================== STEP NAVIGATION ======================
+        function goToStep(stepIndex) {
+            if (stepIndex < 0 || stepIndex >= steps.length) return;
+            
+            // Add transition effect
+            steps[currentStep].classList.add('exiting');
+            setTimeout(() => {
+                steps[currentStep].classList.remove('active', 'exiting');
+                currentStep = stepIndex;
+                steps[currentStep].classList.add('active');
+                
+                // Update progress dots
+                progressDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentStep);
+                });
+                
+                // Scroll to top of step (for mobile)
+                steps[currentStep].scrollTop = 0;
+                
+                // Vibrate on mobile (if supported)
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+            }, 300);
         }
-      });
-    });
-    
-    // ======================
-    // ANIMATION KEYFRAMES
-    // ======================
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-        20%, 40%, 60%, 80% { transform: translateX(5px); }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    // ======================
-    // LOAD SAVED WISH
-    // ======================
-    window.addEventListener('load', () => {
-      // Initialize
-      init();
-    });
-    
-  </script>
-
+        
+        // ====================== EVENT LISTENERS ======================
+        function setupTouchEvents() {
+            // Password entry
+            enterBtn.addEventListener('click', handlePasswordSubmit);
+            passwordInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') handlePasswordSubmit();
+            });
+            
+            // Navigation buttons
+            nextButtons.step2.addEventListener('click', () => goToStep(2));
+            nextButtons.step3.addEventListener('click', () => goToStep(3));
+            nextButtons.step4.addEventListener('click', () => goToStep(4));
+            nextButtons.step5.addEventListener('click', () => goToStep(5));
+            nextButtons.step6.addEventListener('click', () => goToStep(6));
+            nextButtons.step8.addEventListener('click', () => goToStep(8));
+            
+            // Wish handling
+            document.getElementById('skipWish').addEventListener('click', () => goToStep(7));
+            document.getElementById('submitWish').addEventListener('click', handleWishSubmit);
+            
+            // Joke reveal
+            document.getElementById('revealJoke').addEventListener('click', function() {
+                document.getElementById('jokePunchline').style.display = 'block';
+                this.innerHTML = '<i class="fas fa-laugh"></i> Got it!';
+                this.style.background = '#4CAF50';
+                this.style.color = 'white';
+            });
+            
+            // Restart
+            document.getElementById('restartBtn').addEventListener('click', function() {
+                currentStep = 0;
+                passwordInput.value = '';
+                document.getElementById('birthdayWish').value = '';
+                document.getElementById('wishDisplay').style.display = 'none';
+                document.getElementById('jokePunchline').style.display = 'none';
+                document.getElementById('revealJoke').innerHTML = '<i class="fas fa-laugh-wink"></i> Reveal Joke';
+                document.getElementById('revealJoke').style.background = '';
+                document.getElementById('revealJoke').style.color = '';
+                goToStep(0);
+            });
+            
+            // Music control
+            musicControl.addEventListener('click', toggleMusic);
+            
+            // Progress dots
+            progressDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (index <= currentStep) goToStep(index);
+                });
+            });
+        }
+        
+        function handlePasswordSubmit() {
+            const name = passwordInput.value.trim().toLowerCase();
+            const validNames = ['fridah', 'fridah nyanchama', 'friday'];
+            
+            if (validNames.includes(name)) {
+                goToStep(1);
+                toggleMusic();
+                
+                // Celebration petals
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(createPetal, i * 100);
+                }
+            } else {
+                // Visual feedback
+                passwordInput.style.animation = 'none';
+                setTimeout(() => {
+                    passwordInput.style.animation = 'shake 0.5s';
+                }, 10);
+                passwordInput.value = '';
+                passwordInput.placeholder = 'Try "Fridah"';
+                passwordInput.focus();
+            }
+        }
+        
+        function handleWishSubmit() {
+            const wish = document.getElementById('birthdayWish').value.trim();
+            if (wish) {
+                document.getElementById('wishText').textContent = wish;
+                document.getElementById('wishDisplay').style.display = 'block';
+                document.getElementById('wishPromise').innerHTML = 
+                    `Your wish for <strong>${wish}</strong> will be remembered and honored.`;
+                goToStep(7);
+            } else {
+                document.getElementById('birthdayWish').style.border = '2px solid var(--color-primary)';
+                document.getElementById('birthdayWish').focus();
+                setTimeout(() => {
+                    document.getElementById('birthdayWish').style.border = '';
+                }, 1000);
+            }
+        }
+        
+        function toggleMusic() {
+            if (isMusicPlaying) {
+                backgroundMusic.pause();
+                musicIcon.className = 'fas fa-play';
+            } else {
+                backgroundMusic.play().catch(e => {
+                    console.log('Music play failed, trying to load again');
+                    backgroundMusic.load();
+                    setTimeout(() => backgroundMusic.play(), 100);
+                });
+                musicIcon.className = 'fas fa-pause';
+            }
+            isMusicPlaying = !isMusicPlaying;
+        }
+        
+        // ====================== VISUAL EFFECTS ======================
+        function createStars() {
+            const starryBg = document.getElementById('starryBg');
+            const starCount = window.innerWidth < 768 ? 50 : 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.cssText = `
+                    width: ${Math.random() * 3 + 1}px;
+                    height: ${Math.random() * 3 + 1}px;
+                    left: ${Math.random() * 100}%;
+                    top: ${Math.random() * 100}%;
+                    animation-duration: ${Math.random() * 4 + 2}s;
+                    animation-delay: ${Math.random() * 5}s;
+                    opacity: ${Math.random() * 0.5 + 0.3};
+                `;
+                starryBg.appendChild(star);
+            }
+        }
+        
+        function createPetal() {
+            if (currentStep === 0) return;
+            
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.cssText = `
+                left: ${Math.random() * 100}vw;
+                animation-duration: ${8 + Math.random() * 6}s;
+                opacity: ${Math.random() * 0.7 + 0.3};
+                background: hsl(${Math.random() * 30 + 330}, 100%, 70%);
+            `;
+            document.body.appendChild(petal);
+            setTimeout(() => {
+                if (petal.parentNode) petal.remove();
+            }, 15000);
+        }
+        
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+            
+            .step.exiting {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            
+            /* Prevent zoom on iOS input */
+            input, textarea {
+                font-size: 16px !important;
+            }
+            
+            /* Fix iOS button styling */
+            button {
+                -webkit-appearance: none;
+                border-radius: 30px;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Handle mobile orientation change
+        window.addEventListener('orientationchange', function() {
+            setTimeout(() => {
+                // Update any layout if needed
+            }, 300);
+        });
+    </script>
 </body>
 </html>
